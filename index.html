@@ -1,11 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- style css -->
+    <link rel="stylesheet" href="./assets/css/styles.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/styles.css.map" type="text/css"> 
+    <link rel="stylesheet" href="./assets/css/fonts.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/js/charts.js" defer></script>
     <title>Healthy</title>
 </head>
+
 <body>
-    <h1>Healthy</h1>
+    <div class="page-wrapper">
+        <div class="page-wrapper__inner">
+            <div class="header header__desktop">
+                <div class="header__content">
+                    <div class="header__left">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="/assets/images/logo.png" class="logo__heathly" alt="Healthy">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__right">
+                        <ul class="header__nav">
+                            <li class="items items__memo">
+                                <a href="#" class="top__link">
+                                    <img src="./assets/images/icon_memo.svg" class="healthy__img" alt="top icon">
+                                    <span class="icon__memo">自分の記録</span>
+                                </a>
+                            </li>
+                            <li class="items items__challenge">
+                                <a href="#" class="top__link">
+                                    <img src="./assets/images/icon_challenge.svg" class="healthy__img" alt="top icon">
+                                    <span class="icon__memo">チャレンジ</span>    
+                                </a>
+                            </li>
+                            <li class="items items__info">
+                                <a href="#" class="top__link">
+                                    <img src="./assets/images/icon_info.svg" class="healthy__img" alt="top icon">
+                                    <span class="icon__memo">お知らせ</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="button button__menu">
+                            <a href="#" class="menu menu__link">
+                                <img src="./assets/images/icon_menu.svg" class="healthy__img" alt="top icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__mobile">
+                <div class="header__content">
+                    <div class="header__logomobile">
+                        <a href="#">
+                            <img src="/assets/images/logo.png" class="logo__heathly" alt="Healthy">
+                        </a>
+                    </div>
+                    <div class="button button__menu menumobile__button">
+                        <a href="#" class="menu menu__link">
+                            <img src="./assets/images/icon_menu.svg" class="healthy__img" alt="top icon">
+                        </a>
+                    </div>
+                    <!-- <div class="menumobile__button"></div> -->
+                    <!-- <nav class="menumobile__nav mainMenu">
+                        <ul class="menu-list-mobile">
+                            <li class="menu-li item-current">
+                                <a href="#memo">post</a>
+                            </li>
+                            <li class="menu-li">
+                                <a href="#challenge">schedule</a>
+                            </li>
+                            <li class="menu-li">
+                                <a href="#info">notification</a>
+                            </li>
+                        </ul>
+                    </nav> -->
+                </div>
+            </div>
+            <div class="body__container">
+                <div class="healthy__analytics">
+                    <div class="charts">
+                        <!-- <img src="/assets/images/banner.svg" class="heathly__charts" alt="logic analytics charts"> -->
+                        <img src="/assets/images/aspect-ratio.svg" class="heathly__charts" alt="logic analytics charts">
+                        <span class="calc__charts">05/21 75%</span>
+                    </div>
+                    <div class="chart-service">
+                        <canvas id="chartContainer" style="height: 296px; width: 957px;"></canvas>
+                    </div>
+                </div>
+                <div class="healthy__content">
+                    <div class="cat__list">
+                        <div class="cat_items">
+                            <a href="#morning">
+                                <img src="assets/images/cat-1.svg" class="cat__img" alt="morning"/>
+                            </a>
+                        </div>
+                        <div class="cat_items">
+                            <a href="#lunch">
+                                <img src="assets/images/cat-2.svg" class="cat__img" alt="lunch"/>
+                            </a>
+                        </div>
+                        <div class="cat_items">
+                            <a href="#dinner">
+                                <img src="assets/images/cat-3.svg" class="cat__img" alt="dinner"/>
+                            </a>
+                        </div>
+                        <div class="cat_items">
+                            <a href="#snack">
+                                <img src="assets/images/cat-4.svg" class="cat__img" alt="snack"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="prod__list">
+                        <div class="prod__items">
+                            <a href="#prepare-morning">
+                                <img src="assets/images/morning.svg" class="cat__img" alt="prepare for morning"/>
+                                <span class="pro__name">05.21.Morning</span>
+                            </a>
+                        </div>
+                        <div class="prod__items">
+                            <a href="#prepare-lunch">
+                                <img src="assets/images/lunch.svg" class="cat__img" alt="prepare for lunch"/>
+                                <span class="pro__name">05.21.Lunch</span>
+                            </a>
+                        </div>
+                        <div class="prod__items">
+                            <a href="#prepare-dinner">
+                                <img src="assets/images/dinner.svg" class="cat__img" alt="prepare for dinner"/>
+                                <span class="pro__name">05.21.Dinner</span>
+                            </a>
+                        </div>
+                        <div class="prod__items">
+                            <a href="#prepare-snack">
+                                <img src="assets/images/snack.svg" class="cat__img" alt="prepare for snack"/>
+                                <span class="pro__name">05.21.Snack</span>
+                            </a>
+                        </div>
+                        <div class="prod__items">
+                            <a href="#prepare-morning-1">
+                                <img src="assets/images/morning-1.svg" class="cat__img" alt="prepare for morning 1"/>
+                                <span class="pro__name">05.20.Morning</span>
+                            </a>
+                        </div>
+                        <div class="prod__items">
+                            <a href="#prepare-lunch-1">
+                                <img src="assets/images/lunch-1.svg" class="cat__img" alt="prepare for lunch 1"/>
+                                <span class="pro__name">05.20.Lunch</span>
+                            </a>
+                        </div>
+                        <div class="prod__items">
+                            <a href="#prepare-dinner-1">
+                                <img src="assets/images/dinner-1.svg" class="cat__img" alt="prepare for dinner 1"/>
+                                <span class="pro__name">05.20.Dinner</span>
+                            </a>
+                        </div>
+                        <div class="prod__items">
+                            <a href="#prepare-snack-1">
+                                <img src="assets/images/snack-1.svg" class="cat__img" alt="prepare for snack 1"/>
+                                <span class="pro__name">05.21.Snack</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer footer__nav"></div>
+        </div>
+    </div>
 </body>
 </html>

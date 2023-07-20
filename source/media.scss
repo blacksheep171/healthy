@@ -1,0 +1,46 @@
+@mixin mobile {
+	@media (max-width: 679.98px) { @content;}
+}
+
+@mixin small-tablet {
+	@media (min-width: 680px) and (max-width: 767.98px) { @content; }
+}
+
+@mixin tablet {
+	@media (min-width: 768px) and (max-width: 959.98px) { @content; }
+}
+
+@mixin laptop {
+  @media (min-width: 960px) and (max-width:1783.98px) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: 1784px) { @content; }
+}
+
+@mixin media($keys...) {
+	@each $key in $keys {
+		@if ($key == mobile) {
+			@include mobile {
+				@content
+			}
+		}
+		@else if ($key == tablet) {
+			@include tablet {
+				@content
+			}
+		}
+
+		@else if ($key == laptop) {
+			@include laptop {
+				@content
+			}
+		}
+
+		@else if ($key == desktop) {
+			@include desktop {
+				@content
+			}
+		}
+	}
+}
