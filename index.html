@@ -181,12 +181,38 @@
 <footer class="footer footer__nav">
     <div class="footer__wrapper">
         <div class="footer__content">
-            <div class="footer_items footer__subcrible">会員登録</div>
-            <div class="footer_items footer__management">運営会社</div>
-            <div class="footer_items footer__policy">利用規約</div>
-            <div class="footer_items footer__profile_info">個人情報の取扱について</div>
-            <div class="footer_items footer__survey">お問い合わせ</div>
+            <div class="footer_items footer__subcrible">
+                <a class="link__items link__subcrible" href="#subcrible">会員登録</a>
+            </div>
+            <div class="footer_items footer__management">
+                <a class="link__items link__management" href="#management">運営会社</a>
+            </div>
+            <div class="footer_items footer__policy">
+                <a class="link__items link__policy" href="#policy">利用規約</a>
+            </div>
+            <div class="footer_items footer__profile_info">
+                <a class="link__items link__profile_info" href="#profile_info">個人情報の取扱について</a>
+            </div>
+            <div class="footer_items footer__survey">
+                <a class="link__items link__survey" href="#survey">お問い合わせ</a>
+            </div>
+            <!-- custom back to top -->
+            <a id="backtotop"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <path d="M24 0.5C36.9787 0.5 47.5 11.0213 47.5 24C47.5 36.9787 36.9787 47.5 24 47.5C11.0213 47.5 0.5 36.9787 0.5 24C0.5 11.0213 11.0213 0.5 24 0.5Z" fill="white" fill-opacity="0.01" stroke="#777777"/>
+                <path d="M30.5853 28.042L24.0002 21.6579L17.4152 28.042L16.539 27.1925L24.0002 19.959L31.4615 27.1925L30.5853 28.042Z" fill="#777777"/>
+                </svg>
+            </a>
         </div>
     </div>
 </footer>
 </html>
+
+<script>
+    $(document).ready(function() {
+        var backtotop = $('#backtotop');
+        backtotop.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, 800);
+        });
+    });
+</script>

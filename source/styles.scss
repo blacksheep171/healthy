@@ -311,14 +311,35 @@ footer.footer.footer__nav {
             align-content: center;
             justify-content: flex-start;
             align-items: center;
-            .footer__items {
-                color: $text-white;
-                // font-family: Hiragino Kaku Gothic Pro;
-                font-size: 11px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: 1rem; /* 145.455% */
-                letter-spacing: 0.033px;
+            position: relative;
+            .footer_items {
+                a.link__items {
+                    color: $text-white;
+                    text-decoration: unset;
+                    // font-family: Hiragino Kaku Gothic Pro;
+                    font-size: 11px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 1rem; /* 145.455% */
+                    letter-spacing: 0.033px;
+                    &:hover {
+                        color: $yellow-bg;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            a#backtotop {
+                position: absolute;
+                justify-content: center;
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                z-index: 99;
+                font-size: 10px;
+                color: white;
+                cursor: pointer;
+                padding: 15px;
             }
         }
     }
