@@ -47,7 +47,14 @@ const config = {
           },
           grid: {
             color: '#777777',
+            drawBorder: false,
           },
+          gridLines: {
+            drawBorder: false,
+          },
+          border: {
+            display: false
+          }
         },
         y: {
           beginAtZero: true,
@@ -67,7 +74,9 @@ const config = {
             display : false,
           },
           gridLines: {
-            display: false
+            display: false,
+            // color: 'transparent',
+            drawBorder: false,
           },
         },
       }
